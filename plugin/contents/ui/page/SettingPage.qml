@@ -46,13 +46,13 @@ Flickable {
         OptionGroup {
             Layout.fillWidth: true
             header.text: 'Common Option'
-            header.text_color: Theme.textColor
+            header.text_color: Kirigami.Theme.textColor
             header.icon: '../../images/cheveron-down.svg'
-            header.color: Theme.activeBackgroundColor
+            header.color: Kirigami.Theme.activeBackgroundColor
 
             OptionItem {
                 text: 'Pause'
-                text_color: Theme.textColor
+                text_color: Kirigami.Theme.textColor
                 icon: '../../images/pause.svg'
                 actor:  ComboBox {
                     id: pauseMode
@@ -89,7 +89,7 @@ Flickable {
                 contentBottom: ColumnLayout {
                     Text {
                         Layout.fillWidth: true
-                        color: Theme.disabledTextColor
+                        color: Kirigami.Theme.disabledTextColor
                         text: "Automatically pauses playback if any/focus/maximized window detected"
                         wrapMode: Text.Wrap
                     }
@@ -97,21 +97,21 @@ Flickable {
             }
             OptionItem {
                 text: 'Only check window on current screen'
-                text_color: Theme.textColor
+                text_color: Kirigami.Theme.textColor
                 actor: Switch {
                     id: ckbox_pauseFilterByScreen
                 }
             }
             OptionItem {
                 text: 'Pause if PC is on battery power'
-                text_color: Theme.textColor
+                text_color: Kirigami.Theme.textColor
                 actor: Switch {
                     id: chkbox_pauseOnBatPower
                 }
             }
             OptionItem {
                 text: 'Pause if battery level is below'
-                text_color: Theme.textColor
+                text_color: Kirigami.Theme.textColor
                 actor: SpinBox {
                         id: spin_pauseBatPercent
                         from: 0
@@ -121,7 +121,7 @@ Flickable {
             }
             OptionItem {
                 text: 'Display'
-                text_color: Theme.textColor
+                text_color: Kirigami.Theme.textColor
                 icon: '../../images/window.svg'
                 actor: ComboBox {
                     id: displayMode
@@ -147,7 +147,7 @@ Flickable {
 
             OptionItem {
                 text: 'Resume Time'
-                text_color: Theme.textColor
+                text_color: Kirigami.Theme.textColor
                 icon: '../../images/timer.svg'
                 actor: RowLayout {
                     spacing: 0
@@ -164,14 +164,14 @@ Flickable {
                 contentBottom: ColumnLayout {
                     Text {
                         Layout.fillWidth: true
-                        color: Theme.disabledTextColor
+                        color: Kirigami.Theme.disabledTextColor
                         text: "Time to wait to resume playback from pause"
                     }
                 }
             }
             OptionItem {
                 text: 'Randomize Timer'
-                text_color: Theme.textColor
+                text_color: Kirigami.Theme.textColor
                 icon: '../../images/time.svg'
                 actor: Switch {
                     id: ckbox_randomizeWallpaper
@@ -179,7 +179,7 @@ Flickable {
                 contentBottom: ColumnLayout {
                     Text {
                         Layout.fillWidth: true
-                        color: Theme.disabledTextColor
+                        color: Kirigami.Theme.disabledTextColor
                         text: "Randomize wallpapers filtered in the 'Wallpapers' page"
                     }
                     RowLayout {
@@ -215,7 +215,7 @@ Flickable {
 
             OptionItem {
                 text: "Playback Speed"
-                text_color: Theme.textColor
+                text_color: Kirigami.Theme.textColor
                 icon: '../../images/fast-forward.svg'
                 actor: RowLayout {
                     DoubleSpinBox {
@@ -230,7 +230,7 @@ Flickable {
 
             OptionItem {
                 text: "Mute Audio"
-                text_color: Theme.textColor
+                text_color: Kirigami.Theme.textColor
                 icon: ckbox_muteAudio.checked
                     ? '../../images/volume-off.svg'
                     : '../../images/volume-up.svg'
@@ -240,7 +240,7 @@ Flickable {
             }
             OptionItem {
                 text: "Volume"
-                text_color: Theme.textColor
+                text_color: Kirigami.Theme.textColor
                 visible: !cfg_MuteAudio
                 actor: RowLayout {
                     Layout.preferredWidth: displayMode.width
@@ -261,7 +261,7 @@ Flickable {
  
             OptionItem {
                 visible: libcheck.wallpaper
-                text_color: Theme.textColor
+                text_color: Kirigami.Theme.textColor
                 text: "Mouse Input"
                 icon: '../../images/mouse.svg'
                 actor: Switch {
@@ -274,13 +274,13 @@ Flickable {
             Layout.fillWidth: true
 
             header.text: 'Video Option'
-            header.text_color: Theme.textColor
+            header.text_color: Kirigami.Theme.textColor
             header.icon: '../../images/cheveron-down.svg'
-            header.color: Theme.activeBackgroundColor
+            header.color: Kirigami.Theme.activeBackgroundColor
 
             OptionItem {
                 text: 'Video Backend'
-                text_color: Theme.textColor
+                text_color: Kirigami.Theme.textColor
                 icon: '../../images/plugin.svg'
                 actor: ComboBox {
                     model: [
@@ -303,7 +303,7 @@ Flickable {
             
             OptionItem {
                 text: 'Show Mpv Stats'
-                text_color: Theme.textColor
+                text_color: Kirigami.Theme.textColor
                 icon: '../../images/information-outline.svg'
                 visible: cfg_VideoBackend == Common.VideoBackend.Mpv
                 actor: Switch {
@@ -315,14 +315,14 @@ Flickable {
             Layout.fillWidth: true
 
             header.text: 'Scene Option'
-            header.text_color: Theme.textColor
+            header.text_color: Kirigami.Theme.textColor
             header.icon: '../../images/cheveron-down.svg'
-            header.color: Theme.activeBackgroundColor
+            header.color: Kirigami.Theme.activeBackgroundColor
             visible: libcheck.wallpaper
 
             OptionItem {
                 text: 'Fps'
-                text_color: Theme.textColor
+                text_color: Kirigami.Theme.textColor
                 icon: '../../images/tuning.svg'
                 actor: RowLayout {
                     Label {
@@ -341,7 +341,7 @@ Flickable {
                 contentBottom: ColumnLayout {
                     Text {
                         Layout.fillWidth: true
-                        color: Theme.disabledTextColor
+                        color: Kirigami.Theme.disabledTextColor
                         text: "Low: 10, Medium: 15, High: 25, Ultra High: 30"
                     }
                 }
@@ -349,7 +349,7 @@ Flickable {
             }
             OptionItem {
                 text: 'Shader cache'
-                text_color: Theme.textColor
+                text_color: Kirigami.Theme.textColor
                 icon: '../../images/information-outline.svg'
                 actor: Kirigami.ActionToolBar {
                     Layout.fillWidth: true
@@ -371,7 +371,7 @@ Flickable {
                         Layout.fillWidth: true
                         property string cache_path: Common.urlNative(plugin_info.cache_path)
 
-                        color: Theme.disabledTextColor
+                        color: Kirigami.Theme.disabledTextColor
                         text: plugin_info.cache_path
                         ? `${cache_path} - ${cache_size}`
                         : `Not available`
